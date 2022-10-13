@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 16px 0;
+  width: 100%;
+  background-color: var(--color-white);
+  transition: top 0.3s ease-in-out;
+
+  &.hide {
+    top: calc(var(--header-height) * -1);
+  }
+}

@@ -1,0 +1,88 @@
+$mqs: ("mobile-sm": 345,
+  "mobile-s": 376,
+  "mobile-sl": 476,
+  "mobile-md": 577,
+  "mobile-l": 769,
+  "tablet": 993,
+  "tablet-l": 1080,
+  "laptop-mac": 1281,
+  "laptop": 1441,
+  "desktop": 1920);
+
+@mixin for-width($size, $size2: null) {
+
+  @each $name,
+  $bp in $mqs {
+    $max: calc(#{em($bp)} - #{em(1)});
+    $min: em($bp);
+
+    @if $size=="-#{$name}" {
+      @media (max-width: $max) {
+        @content;
+      }
+    }
+
+    @if $size=="+#{$name}" {
+      @media (min-width: $min) {
+        @content;
+      }
+    }
+
+    @if $size2=="#{$name}" {
+
+      @each $name,
+      $bp in $mqs {
+        $min: em($bp);
+
+        @if $size=="#{$name}" {
+          @media (min-width: $min) and (max-width: $max) {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin for-height($size, $size2: null) {
+
+  @each $name,
+  $bp in $mqs {
+    $max: calc(#{em($bp)} - #{em(1)});
+    $min: em($bp);
+
+    @if $size=="-#{$name}" {
+      @media (max-height: $max) {
+        @content;
+      }
+    }
+
+    @if $size=="+#{$name}" {
+      @media (min-height: $min) {
+        @content;
+      }
+    }
+
+    @if $size2=="#{$name}" {
+
+      @each $name,
+      $bp in $mqs {
+        $min: em($bp);
+
+        @if $size=="#{$name}" {
+          @media (min-height: $min) and (max-height: $max) {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+._example {
+  @include for-height(-desktop) {
+    opacity: 0.5;
+  };
+}
+*/

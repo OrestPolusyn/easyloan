@@ -1,0 +1,163 @@
+.hero {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 93.3%, 0% 100%);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, #00cdb3 0%, #b2d35f 100%);
+    opacity: 0.1;
+    mix-blend-mode: normal;
+
+    @include for-width(-mobile-md) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    @include flex-all-sb;
+
+    @include for-width(-mobile-md) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 450px;
+    letter-spacing: -0.3px;
+
+    .slogan {
+      margin-bottom: 17px;
+
+      @include for-width(-mobile-l) {
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      margin-bottom: 48px;
+
+      @include for-width(-mobile-l) {
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+
+      @include for-width(-mobile-md) {
+        margin-bottom: 30px;
+        font-size: 17px;
+      }
+    }
+
+    @include for-width(-mobile-md) {
+      margin-right: 0;
+      margin-bottom: 34px;
+      width: 100%;
+      max-width: 330px;
+      text-align: center;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    max-width: 505px;
+    transform: translateX(-79px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -70px;
+      top: 0;
+      z-index: -1;
+      display: none;
+      width: 102vw;
+      height: 100%;
+      background-image: linear-gradient(to left, #00cdb3 0%, #b2d35f 100%);
+      opacity: 0.1;
+      mix-blend-mode: normal;
+
+      @include for-width(-mobile-md) {
+        display: block;
+      }
+
+      @include for-width(-mobile-sl) {
+        left: -20px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -70px;
+      top: 0;
+      z-index: -1;
+      display: none;
+      width: 102vw;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(254, 254, 254, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+      mix-blend-mode: normal;
+
+      @include for-width(-mobile-md) {
+        display: block;
+      }
+
+      @include for-width(-mobile-sl) {
+        left: -20px;
+      }
+    }
+
+    @include for-width(-tablet-l) {
+      transform: translateX(-30px);
+    }
+
+    @include for-width(-tablet) {
+      width: 90%;
+      transform: translate(0);
+    }
+
+    @include for-width(-tablet) {
+      width: 80%;
+    }
+
+    @include for-width(-mobile-sl) {
+      width: 102%;
+      transform: translateX(7px);
+    }
+  }
+
+  h1 {
+    margin-bottom: 25px;
+    font-size: 72px;
+    line-height: 1.14;
+    letter-spacing: -3px;
+
+    span {
+      font-weight: 700;
+    }
+
+    @include for-width(-tablet) {
+      font-size: 52px;
+    }
+
+    @include for-width(-mobile-l) {
+      margin-bottom: 10px;
+      font-size: 38px;
+    }
+
+    @include for-width(-mobile-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include for-width(-mobile-md) {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    padding-top: 48px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "./vendor/normalize";
+
+// базовые подключения
+@import "./vars";
+@import "./mixins";
+@import "./fonts";
+@import "./settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/style";
+@import "./components/hero";
+@import "./components/choose";
+@import "./components/work";
+@import "./components/sitename";
+@import "./components/customers";
+@import "./components/faq";
+@import "./components/footer";

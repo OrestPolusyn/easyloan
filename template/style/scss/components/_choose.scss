@@ -1,0 +1,119 @@
+.choose {
+  padding: 78px 0;
+
+  &__inner {
+    width: 100%;
+
+    @include for-width(-mobile-sl) {
+      margin: 0 auto;
+      max-width: 327px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-sl) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-radius: var(--radius-card);
+    padding: 88px 32px 32px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 32px;
+      background-image: url("../assets/img/svg/lock.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--secure {
+      &::before {
+        background-image: url("../assets/img/svg/lock.svg");
+      }
+    }
+
+    &--fast {
+      &::before {
+        background-image: url("../assets/img/svg/rocket.svg");
+      }
+    }
+
+    &--pig {
+      &::before {
+        background-image: url("../assets/img/svg/pig.svg");
+      }
+    }
+
+    &--simple {
+      &::before {
+        background-image: url("../assets/img/svg/bulb.svg");
+      }
+    }
+
+    @include for-width(-tablet-l) {
+      padding: 88px 25px 25px;
+    }
+
+    @include for-width(-mobile-l) {
+      padding: 88px 32px 30px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    text-transform: capitalize;
+  }
+
+  &__item-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -0.15px;
+  }
+
+  .slogan {
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 30px;
+
+    @include for-width(-mobile-sl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .desc {
+    margin: 0 auto rem(53);
+    width: 100%;
+    max-width: 460px;
+    line-height: 1.7;
+    text-align: center;
+
+    @include for-width(-mobile-sl) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  @include for-width(-mobile-sl) {
+    padding: 64px 0 66px;
+  }
+}
