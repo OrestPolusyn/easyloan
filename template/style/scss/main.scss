@@ -1,12 +1,9 @@
 @import "./vendor/normalize";
 
-// базовые подключения
 @import "./vars";
 @import "./mixins";
-@import "./fonts";
 @import "./settings";
 
-// подключения компонентов страницы
 @import "./components/header";
 @import "./components/style";
 @import "./components/hero";

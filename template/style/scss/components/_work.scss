@@ -20,8 +20,13 @@
 
   &__content {
     margin-right: 20px;
+    padding-top: 16px;
     width: 100%;
     max-width: 400px;
+
+    @include for-width(-tablet) {
+      padding-top: 0;
+    }
 
     @include for-width(-mobile-l) {
       margin-right: 0;
@@ -94,11 +99,12 @@
   .btn {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -14px;
 
     @include for-width(-mobile-l) {
       position: inherit;
       margin: 0 auto;
+      bottom: 0;
     }
   }
 

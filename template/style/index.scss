@@ -1,14 +1,7 @@
 @import "./scss/vendor/normalize";
-
-
-
-// базовые подключения
 @import "./scss/vars";
 @import "./scss/mixins";
-@import "./scss/fonts";
 @import "./scss/settings";
-
-// подключения компонентов страницы
 @import "./scss/components/header";
 @import "./scss/components/style";
 @import "./scss/components/hero";
