@@ -73,21 +73,6 @@ a {
   color: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 section {
   display: block;
 }
@@ -134,43 +119,4 @@ input {
   border: none;
   border-radius: 0;
   background-color: transparent;
-}
-
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
-  display: none;
-}
-
-input[type=search]::-ms-clear {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-input[type=search]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-  /* Firefox */
 }
