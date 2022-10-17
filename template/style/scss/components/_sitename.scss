@@ -36,6 +36,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        transform: scale(1, 1.25);
 
         @include for-width(-mobile-md) {
           left: -3px;

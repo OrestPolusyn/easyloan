@@ -104,13 +104,14 @@
         content: "";
         position: absolute;
         bottom: -8px;
-        left: -9px;
+        left: 5px;
         height: 4px;
-        width: 95%;
+        width: 96%;
         background-image: url("../assets/img/line.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        transform: scale(1, 1.25);
 
         @include for-width(-mobile-md) {
           bottom: 0;

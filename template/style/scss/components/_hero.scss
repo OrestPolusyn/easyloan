@@ -148,17 +148,24 @@
         &::before {
           content: "";
           position: absolute;
-          bottom: 3px;
-          left: -4px;
+          bottom: 5px;
+          left: 11px;
           height: 4px;
           width: 93%;
           background-image: url("../assets/img/line.svg");
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
+          transform: scale(1, 1.25);
+
+          @include for-width(-mobile-l) {
+            left: 5px;
+            bottom: 0;
+          }
 
           @include for-width(-mobile-md) {
             width: 190%;
+            bottom: 4px;
             left: -90%;
           }
         }
