@@ -122,7 +122,6 @@ button {
   width: fit-content;
   background-color: transparent;
   cursor: pointer;
-  width: 100%;
 }
 
 button:disabled {

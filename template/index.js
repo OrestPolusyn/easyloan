@@ -45,10 +45,8 @@ const main = () => {
     const checkScroll = function () {
       curScroll = w.scrollY || doc.scrollTop
       if (curScroll > prevScroll) {
-        // scrolled down
         curDirection = 2
       } else {
-        //scrolled up
         curDirection = 1
       }
 

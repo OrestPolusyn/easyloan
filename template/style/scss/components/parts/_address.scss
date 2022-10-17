@@ -1,6 +1,6 @@
 .address {
   width: 100%;
-  max-width: 290px;
+  max-width: 295px;
   letter-spacing: 0.01em;
 
   &__item {
@@ -15,9 +15,5 @@
 
   span {
     display: block;
-  }
-
-  a {
-    letter-spacing: 0;
   }
 }

@@ -3,11 +3,10 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-style: normal;
-  font-feature-settings: "pnum"on, "lnum"on;
   font-size: 17px;
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
-  color: var(--color-black);
+  color: var(--primary-1000);
   background-color: var(--color-white);
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
@@ -26,66 +25,11 @@
   min-height: 100vh;
 }
 
-.hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
-}
-
-.sr-only {
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-}
-
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
-}
-
-.dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
-}
-
-.fixed {
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 5;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-black);
-    opacity: 0.3;
-  }
-}
-
-.input-reset {
-  border-color: transparent;
-  padding: 15px 30px;
-  width: 100%;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
-  background-color: var(--color-noactive);
-
-  &::placeholder {
-    color: var(--color-gray);
-  }
 }
 
 .main {
