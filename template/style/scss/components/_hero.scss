@@ -137,6 +137,11 @@
     font-size: 72px;
     line-height: 1.14;
     letter-spacing: -0.023em;
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
 
     span {
       font-weight: 700;
