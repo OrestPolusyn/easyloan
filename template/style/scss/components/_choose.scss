@@ -96,6 +96,28 @@
   .title {
     margin-bottom: 30px;
 
+    span {
+      position: relative;
+      white-space: pre;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: -9px;
+        height: 4px;
+        width: 95%;
+        background-image: url("../assets/img/line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @include for-width(-mobile-md) {
+          bottom: 0;
+        }
+      }
+    }
+
     @include for-width(-mobile-sl) {
       margin-bottom: 32px;
     }

@@ -20,6 +20,29 @@
     margin: 0 auto 34px;
     width: 100%;
     max-width: 450px;
+
+    span {
+      position: relative;
+      white-space: pre;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: -15px;
+        height: 5px;
+        width: 112%;
+        background-image: url("../assets/img/line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @include for-width(-mobile-md) {
+          left: -3px;
+          width: 105%;
+        }
+      }
+    }
   }
 
   .desc {

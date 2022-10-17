@@ -140,6 +140,29 @@
 
     span {
       font-weight: 700;
+      white-space: pre;
+
+      span {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 3px;
+          left: -4px;
+          height: 4px;
+          width: 93%;
+          background-image: url("../assets/img/line.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+
+          @include for-width(-mobile-md) {
+            width: 174%;
+            left: -90%;
+          }
+        }
+      }
     }
 
     @include for-width(-tablet) {

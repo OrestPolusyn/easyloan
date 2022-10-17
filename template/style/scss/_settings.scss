@@ -73,20 +73,6 @@
   span {
     position: relative;
     font-weight: 700;
-
-    &::before {
-      content: "";
-      border-top-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      position: absolute;
-      left: -5px;
-      transform-origin: top right;
-      transform: skew(73deg);
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      background-color: var(--secondary-500);
-    }
   }
 
   @include for-width(-mobile-sl) {
@@ -111,4 +97,19 @@
 
 .f16 {
   box-sizing: content-box;
+}
+
+.line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../assets/img/line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }

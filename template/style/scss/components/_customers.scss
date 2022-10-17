@@ -111,7 +111,7 @@
         line-height: 1.41;
         letter-spacing: -0.3px;
         text-align: center;
-        color: var(--contrast-primary-500);
+        color: var(--primary-1000);
       }
     }
   }
@@ -144,6 +144,24 @@
   .title {
     margin-bottom: 32px;
     text-align: left;
+
+    span {
+      position: relative;
+      white-space: pre;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background-image: url("../assets/img/line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
 
     @include for-width(-mobile-sl) {
       margin: 0 auto 33px;
