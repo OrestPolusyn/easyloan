@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "CeraPro";
+  src: url('../fonts/CeraPro-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('../fonts/CeraPro-Medium.woff2') format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('../fonts/CeraPro-Bold.woff2') format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Didot";
+  src: url('../fonts/Didot-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Didot";
+  src: url('../fonts/Didot-Bold.woff2') format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+  color: var(--color-black);
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+  }
+
+  @include for-width(-mobile-sl) {
+    font-size: 16px;
+  }
+}
+
+.site-container {
+  @include flex;
+
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.main {
+  padding-top: var(--header-height);
+
+  @include for-width(-mobile-l) {
+    padding-top: 0;
+  }
+}
+
+.section {
+  padding: rem(89) 0;
+
+  @include for-width(-mobile-l) {
+    padding: rem(64) 0;
+  }
+}
+
+.background {
+  background-color: var(--color-white);
+}
+
+.logo {
+  width: 100%;
+  max-width: 175px;
+
+  img {
+    width: 100%;
+  }
+
+  @include for-width(-tablet) {
+    max-width: 130px;
+  }
+}
+
+.slogan {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-red);
+}
+
+.title {
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  font-size: clamp(34px, rem(45), 45px);
+  line-height: 1.3;
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: capitalize;
+
+  @include for-width(-mobile-l) {
+    font-size: 34px;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-text);
+
+  @include for-width(-mobile-l) {
+    font-size: 16px;
+  }
+}
+
+
+.x8 {
+  z-index: 10;
+}
+
+.f16 {
+  box-sizing: content-box;
+}

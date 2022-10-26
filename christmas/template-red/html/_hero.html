@@ -1,0 +1,65 @@
+<section class="hero" id="advantages">
+  <div class="hero__container container">
+
+    <div class="hero__inner" style="background-image: url('../assets/bg.png');">
+
+      <div class="hero__content">
+        <h1>
+          {{header-title}}
+        </h1>
+
+        <form action="#" class="hero__form">
+          <label class="sr-only" for="hero__select">
+            Price range
+          </label>
+
+          <div class="hero__select">
+            <select class="hero__form-area" name="select-range" id="hero__select">
+              <option value="$1,100 - $2,500">
+                $1,100 - $2,500
+              </option>
+              <option value="$2,600 - $4,500">
+                $2,600 - $4,500
+              </option>
+              <option value="$4,600 - $7,000">
+                $4,600 - $7,000
+              </option>
+            </select>
+          </div>
+
+          <label class="sr-only" for="email">
+            Email area
+          </label>
+
+          <input class="hero__form-area" type="email" name="email" id="email" placeholder="{{unsubscribe-label-email}}">
+
+          <label class="sr-only" for="ssn">
+            {{login-label-ssn}}
+          </label>
+
+          <input class="hero__form-area" type="text" name="ssn" id="snn" placeholder="{{login-label-ssn}}">
+
+          <button class="btn btn--red" type="submit">
+            {{button-name}}
+          </button>
+        </form>
+
+
+        <a class="btn btn--red hero__form-mobile" href="#">
+          {{button-name}}
+        </a>
+      </div>
+
+
+      <div class="hero__picture">
+        <picture>
+          <source srcset="../assets/hero.avif" type="image/avif">
+          <source srcset="../assets/hero.webp" type="image/webp">
+          <img class="hero__image" src="../assets/hero.png" width="505" height="720" alt="Smiling girl"
+            loading="lazy">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</section>

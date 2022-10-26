@@ -1,0 +1,91 @@
+.faq {
+  .desc {
+    margin-bottom: rem(42);
+    text-align: center;
+
+    @include for-width(-mobile-sl) {
+      margin-bottom: 26px;
+    }
+  }
+
+  .title {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .slogan {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+}
+
+.faq-list {
+  &__item {
+    &:last-child {
+      .faq-list__faq {
+        border-bottom: 1px solid var(--color-border);
+      }
+    }
+  }
+
+  &__faq {
+    border-top: 1px solid var(--color-border);
+    padding: 32px 0 31px;
+    width: 100%;
+
+    summary {
+      --transform: translateY(-50%);
+
+      position: relative;
+      padding-right: 30px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: -0.3px;
+      color: var(--color-arrow);
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        width: 12px;
+        height: 6px;
+        background-image: url("../assets/arrow.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: var(--transform);
+        transition: transform 0.2s ease;
+      }
+
+      @include for-width(-mobile-sl) {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+    }
+
+    &[open] {
+      summary {
+        padding-bottom: 15px;
+
+        &::before {
+          transform: var(--transform) rotate(180deg);
+        }
+      }
+    }
+
+    @include for-width(-mobile-sl) {
+      padding: 16px 0;
+    }
+  }
+
+  &__content {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -0.15px;
+    color: var(--color-text);
+  }
+}

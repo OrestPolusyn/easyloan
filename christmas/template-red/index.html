@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  ${require('../src/html/head_index.html')}
+  <!--required-->
+  <!--    start of custom code-->
+  <!--    finish of custom code-->
+  {@@-afterHeaderCode}
+  <!--required-->
+</head>
+
+
+<body class="page__body">
+  {@@-beforeBodyCode}
+  <div class="site-container">
+    ${require('./html/_header.html')}
+
+    <main class="main">
+      ${require('./html/_hero.html')}
+
+      ${require('./html/_work.html')}
+
+      ${require('./html/_choose.html')}
+
+      ${require('./html/_present.html')}
+
+      ${require('./html/_faq.html')}
+
+    </main>
+
+      ${require('./html/_footer.html')}
+</body>
+
+</html>
