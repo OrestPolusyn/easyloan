@@ -14,43 +14,21 @@
   color: var(--color-white);
   transition-property: color, background-color, border-color;
   transition-duration: 0.2s;
+  background-color: var(--color-red);
   transition-timing-function: linear;
 
-  &:not(.nav__action) {
-    @include for-width(-mobile-sl) {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 279px;
-    }
+  &:focus {
+    border-color: var(--color-blue-500);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-red-700);
   }
 
-  &:has(.nav__action) {
-    @include for-width(-mobile-l) {
-      padding: 4px 10px;
-    }
-
-    @include for-width(-mobile-md) {
-      padding: 6px 15px;
-    }
+  &:hover {
+    background-color: var(--color-red-500);
   }
 
-  &--red {
-    background-color: var(--color-red);
-
-    &:focus {
-      border-color: var(--color-blue-500);
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
-      background-color: var(--color-red-700);
-    }
-
-    &:hover {
-      background-color: var(--color-red-500);
-    }
-
-    &:active {
-      background-color: var(--color-red-700);
-      opacity: 0.8;
-    }
+  &:active {
+    background-color: var(--color-red-700);
   }
 
   &--disabled {
@@ -75,10 +53,7 @@
     }
 
     &--disabled {
-      background-color: var(--color-disabled);
       opacity: 0.1;
-      cursor: default;
-      pointer-events: none;
     }
   }
 

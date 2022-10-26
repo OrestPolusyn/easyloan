@@ -12,7 +12,7 @@ $mqs: ("mobile-sm": 345,
 
   @each $name,
   $bp in $mqs {
-    $max: calc(#{em($bp)} - #{em(1)});
+    $max: em($bp - 1);
     $min: em($bp);
 
     @if $size=="-#{$name}" {

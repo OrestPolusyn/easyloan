@@ -52,8 +52,6 @@
     @include for-width(-mobile-l) {
       flex-direction: column;
       padding: rem(41) 0 0;
-      background-position: top center;
-      background-size: contain;
     }
   }
 
@@ -104,35 +102,29 @@
     }
 
     @include for-width(-laptop-mac) {
-      --scale: scale(1.5);
+      --scale: scale(1.53);
 
       bottom: -40px;
     }
 
     @include for-width(-tablet) {
+      --scale: scale(1.2);
+
       right: -60px;
-      bottom: -15px;
+      bottom: -32px;
     }
 
     @include for-width(-mobile-l) {
-      --scale: scale(1.23);
-
       right: 17px;
+      bottom: -10px;
     }
 
     @include for-width(-mobile-sl) {
-      --scale: scale(1.2);
+      --scale: scale(1);
 
-      right: 3px;
-      bottom: -30px;
+      right: 0;
+      bottom: 0;
       max-width: 261px;
-    }
-
-    @include for-width(-mobile-s) {
-      --scale: scale(1.22);
-
-      right: 3px;
-      bottom: -30px;
     }
   }
 
@@ -184,14 +176,11 @@
     line-height: 1.1;
     letter-spacing: -1px;
     text-align: center;
+    color: var(--color-black);
     text-transform: capitalize;
 
     @include for-width(-laptop) {
       font-size: 45px;
-    }
-
-    @include for-width(-tablet) {
-      color: var(--color-white);
     }
 
     @include for-width(-mobile-sl) {

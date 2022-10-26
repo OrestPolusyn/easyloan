@@ -14,43 +14,21 @@
   color: var(--color-white);
   transition-property: color, background-color, border-color;
   transition-duration: 0.2s;
+  background-color: var(--color-blue);
   transition-timing-function: linear;
 
-  &:not(.nav__action) {
-    @include for-width(-mobile-sl) {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 279px;
-    }
-  }
-
-  &:has(.nav__action) {
-    @include for-width(-mobile-l) {
-      padding: 4px 10px;
-    }
-
-    @include for-width(-mobile-md) {
-      padding: 6px 15px;
-    }
-  }
-
-  &--blue {
+  &:focus {
+    border-color: var(--color-blue-100);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
     background-color: var(--color-blue);
+  }
 
-    &:focus {
-      border-color: var(--color-blue-100);
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
-      background-color: var(--color-blue);
-    }
+  &:hover {
+    background-color: var(--color-blue-500);
+  }
 
-    &:hover {
-      background-color: var(--color-blue-500);
-    }
-
-    &:active {
-      background-color: var(--color-blue-700);
-      opacity: 0.8;
-    }
+  &:active {
+    background-color: var(--color-blue-700);
   }
 
   &--disabled {

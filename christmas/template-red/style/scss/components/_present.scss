@@ -144,15 +144,8 @@
     @include for-width(-mobile-md) {
       --scale: scale(1);
 
-      bottom: -15px;
-    }
-
-    @include for-width(-mobile-sl) {
-      --scale: scale(1.03);
-
-      left: auto;
-      right: -5px;
-      bottom: 5px;
+      bottom: -1px;
+      margin: 0 auto;
     }
   }
 

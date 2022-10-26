@@ -126,26 +126,31 @@
       bottom: 53px;
     }
 
-    @include for-width(-mobile-l) {
+    @include for-width(-tablet-l) {
+      --scale: scale(1.1);
+
+      position: relative;
+      bottom: -50px;
+      right: -29px;
+      margin: 0 auto;
+    }
+
+    @include for-width(-tablet) {
       --scale: scale(1.1);
 
       bottom: -13px;
+      right: 0;
       margin: 0 auto;
     }
 
     @include for-width(-mobile-md) {
       --scale: scale(1);
 
-      right: 0;
       bottom: 0;
     }
 
     @include for-width(-mobile-sl) {
-      --scale: scale(1.03);
-
       left: auto;
-      right: -5px;
-      bottom: 5px;
     }
   }
 
