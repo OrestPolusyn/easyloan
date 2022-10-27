@@ -28,9 +28,15 @@
       ${require('./html/_faq.html')}
 
     </main>
-
     ${require('./html/_footer.html')}
   </div>
+
+  ${require('../../src/modals/index.html')}
+  <!--required-->
+  ${require('../../src/html/end-body-index.html')}
+  <!--required-->
+  {@@-afterBodyCode}
+  <!--required-->
 </body>
 
 </html>
