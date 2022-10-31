@@ -76,8 +76,9 @@ documentReady(() => {
 
     window.addEventListener("scroll", checkScroll)
   }
+
+  headerHide()
+  getHeaderHeight()
 })
 
-headerHide()
-getHeaderHeight()
 documentReady()

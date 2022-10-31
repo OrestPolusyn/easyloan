@@ -3,6 +3,10 @@
 
     <div class="footer__inner">
       <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#advantages">Home</a>
+        </li>
+
         ${require('../../src/modals/index.js').default.map((item) =>
         `<li class="footer__item">
           <a class="footer__link" href="#${item.href}">{{${item.text}}}</a>
