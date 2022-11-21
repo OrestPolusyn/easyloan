@@ -25,7 +25,8 @@
 
       <div class="hero__picture">
         <picture>
-          <source srcset="../assets/hero.webp" type="image/webp">
+          <source srcset="../assets/hero.webp" type="image/webp" media="(min-width: 577px)">
+          <source srcset="../assets/hero-mob.png" type="image/png" media="(max-width: 576px)">
           <img class="hero__image" src="../assets/hero.png" width="633" height="645" alt="{{header-title}}"
             loading="lazy">
         </picture>

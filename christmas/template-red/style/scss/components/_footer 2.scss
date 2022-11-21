@@ -1,0 +1,74 @@
+.footer {
+  margin-top: auto;
+  padding: rem(69) 0 rem(50);
+  color: var(--color-text);
+
+  &__inner {
+    @include flex-sb;
+
+    margin-bottom: 49px;
+    font-size: 18px;
+    line-height: 1.6;
+
+    @include for-width(-mobile-sl) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 15px;
+    gap: 16px;
+    width: 100%;
+    max-width: 725px;
+
+    a {
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.61;
+
+    &:last-of-type {
+      margin-bottom: 21px;
+    }
+
+    @include for-width(-mobile-sl) {
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  .copy {
+    font-size: 13px;
+    line-height: 1.61;
+
+    @include for-width(-mobile-sl) {
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  @include for-width(-mobile-sl) {
+    padding: 35px 0 35px 8px;
+  }
+}

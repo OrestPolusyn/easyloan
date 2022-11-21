@@ -52,7 +52,6 @@
       @include for-width(-tablet) {
         grid-column: 1 / span 2;
         margin: 0 auto;
-        max-width: 410px;
       }
 
       @include for-width(-mobile-md) {
@@ -98,7 +97,6 @@
 
     @include for-width(-mobile-md) {
       margin: 0 auto;
-      max-width: 410px;
     }
   }
 
@@ -128,5 +126,9 @@
   .desc {
     margin-bottom: rem(46);
     letter-spacing: 0;
+  }
+
+  @include for-width(-tablet) {
+    padding: 80px 0;
   }
 }

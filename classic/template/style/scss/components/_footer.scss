@@ -12,8 +12,9 @@
     font-size: 18px;
     line-height: 1.6;
 
-    @include for-width(-mobile-sl) {
+    @include for-width(-mobile-md) {
       display: block;
+      margin-bottom: 30px;
     }
   }
 
@@ -41,7 +42,7 @@
     }
 
     @include for-width(-mobile-md) {
-      grid-template-columns: 1fr;
+      margin-bottom: 30px;
     }
   }
 
@@ -63,12 +64,9 @@
   .copy {
     font-size: 12px;
     line-height: 1.6;
-
-    @include for-width(-mobile-sl) {
-      font-size: 15px;
-      line-height: 1.6;
-      letter-spacing: -0.15px;
-    }
   }
 
+  @include for-width(-tablet) {
+    padding: 60px 0;
+  }
 }

@@ -57,10 +57,6 @@
   clip: rect(0 0 0 0);
 }
 
-.main {
-  padding-top: var(--header-height);
-}
-
 .logo {
   width: 100%;
   max-width: 80px;
@@ -75,6 +71,15 @@
   letter-spacing: 0.25px;
   color: var(--neutral-750);
   text-transform: capitalize;
+
+  @include for-width(-tablet) {
+    font-size: 36px;
+  }
+
+  @include for-width(-mobile-md) {
+    line-height: 1.4;
+    text-align: center;
+  }
 }
 
 .desc {

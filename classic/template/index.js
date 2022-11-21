@@ -39,6 +39,12 @@ documentReady(() => {
         curDirection = 1;
       }
 
+      if (curScroll > threshold) {
+        header.classList.add('header-scroll');
+      } else {
+        header.classList.remove('header-scroll');
+      }
+
       if (curDirection !== prevDirection) {
         toggled = toggleHeader();
       }

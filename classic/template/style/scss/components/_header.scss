@@ -4,7 +4,7 @@
   z-index: 10;
   padding: 14px 0;
   width: 100%;
-  background-color: var(--color-white);
+  background-color: transparent;
   transition: top 0.3s ease-in-out;
 
   &.hide {
@@ -14,8 +14,20 @@
   .btn {
     padding: 13px 20px;
     font-weight: 400;
-    font-weight: 400;
     font-size: 16px;
     line-height: 1;
+
+    @include for-width(-mobile-md) {
+      font-size: 14px;
+      padding: 11px 13px;
+    }
+  }
+
+  &.header-scroll {
+    background-color: var(--color-white);
+  }
+
+  @include for-width(-mobile-md) {
+    padding: 18px 0;
   }
 }

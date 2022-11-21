@@ -5,7 +5,9 @@ $mqs: ("mobile-sm": 345,
   "mobile-l": 769,
   "tablet": 993,
   "tablet-l": 1080,
-  "laptop-mac": 1280,);
+  "laptop-mac": 1280,
+  "laptop": 1380,
+  );
 
 @mixin for-width($size, $size2: null) {
 

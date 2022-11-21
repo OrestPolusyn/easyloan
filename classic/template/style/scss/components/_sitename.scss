@@ -13,6 +13,10 @@
     >*:not(form) {
       margin: 0 auto 30px;
       width: 100%;
+
+      @include for-width(-mobile-md) {
+        margin: 0 auto 32px;
+      }
     }
   }
 
@@ -22,5 +26,22 @@
 
   &__text {
     max-width: 900px;
+  }
+
+  &__btn {
+    @include for-width(-mobile-md) {
+      max-width: 185px;
+    }
+  }
+
+  @include for-width(-tablet) {
+    padding: 80px 0;
+  }
+
+  @include for-width(-mobile-md) {
+    background-image: url('../assets/icons/waves-mob.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
   }
 }

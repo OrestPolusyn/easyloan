@@ -4,6 +4,10 @@
 
     &:not(:last-child) {
       margin-bottom: rem(35);
+
+      @include for-width(-mobile-sl) {
+        margin-bottom: 40px;
+      }
     }
 
     &::before {
@@ -11,8 +15,8 @@
       position: absolute;
       left: 2px;
       top: 2px;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       background-image: url('../assets/icons/check.svg');
       background-size: contain;
       background-position: center;

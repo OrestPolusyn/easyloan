@@ -16,7 +16,19 @@
 
       &:not(:last-child) {
         margin-right: rem(47);
+
+        @include for-width(-mobile-l) {
+          margin-right: 12px;
+        }
       }
+    }
+
+    @include for-width(-mobile-l) {
+      margin: 0 15px;
+    }
+
+    @include for-width(-mobile-md) {
+      display: none;
     }
   }
 }
