@@ -1,0 +1,35 @@
+.nav {
+  @include flex-all-sb;
+
+
+  ul {
+    @include flex-v-center;
+
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: var(--nav-black);
+
+    li {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: rem(41);
+
+        @include for-width(-tablet) {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    @include for-width(-mobile-l) {
+      margin: 0 15px;
+    }
+
+    @include for-width(-mobile-md) {
+      display: none;
+    }
+  }
+}
