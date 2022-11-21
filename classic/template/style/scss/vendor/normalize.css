@@ -42,10 +42,6 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 img,
 object,
 picture,

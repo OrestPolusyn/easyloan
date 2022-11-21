@@ -7,20 +7,6 @@ import './style/index.styl';
 import './style/index.less';
 
 documentReady(() => {
-  const faqTabs = [...document.querySelectorAll('.faq-list__faq')];
-
-  if (faqTabs.length > 0) {
-    faqTabs.forEach((targetDetail) => {
-      targetDetail.addEventListener('click', () => {
-        faqTabs.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute('open');
-          }
-        });
-      });
-    });
-  }
-
   const getHeaderHeight = () => {
     const headerHeight = document.querySelector('.header')?.offsetHeight;
     document
