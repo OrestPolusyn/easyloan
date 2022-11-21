@@ -27,7 +27,6 @@
       @include for-width(-tablet) {
         grid-column: 1 / span 2;
         margin: 0 auto;
-        max-width: 410px;
       }
 
       @include for-width(-mobile-md) {

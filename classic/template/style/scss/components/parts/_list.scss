@@ -1,0 +1,35 @@
+.list {
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      // background-image: url('/assets/icons/check.svg');
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__item-title {
+    padding-left: 30px;
+    margin-bottom: 17px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--neutral-750);
+  }
+
+  &__item-desc {
+    text-align: left;
+  }
+}

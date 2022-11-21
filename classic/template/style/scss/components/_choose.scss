@@ -1,0 +1,132 @@
+.choose {
+  padding: 105px 0 104px;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      max-width: 475px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 115px 31px 32px 31px;
+    border: 1px solid var(--neutral-75);
+    line-height: 1.5;
+    transition-property: border-color, box-shadow, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 32px;
+      width: 52px;
+      height: 52px;
+      background-color: var(--primary-25);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      @include for-width(-tablet) {
+        grid-column: 1 / span 2;
+        margin: 0 auto;
+        max-width: 410px;
+      }
+
+      @include for-width(-mobile-md) {
+        grid-column: auto;
+      }
+    }
+
+    &:hover {
+      border-color: transparent;
+      background-color: var(--color-white);
+      box-shadow: var(--shadow-item);
+    }
+
+    &--volt {
+      &::after {
+        top: 41px;
+        left: 47px;
+        width: 19px;
+        height: 32px;
+        background-image: url("../assets/icons/volt.svg");
+      }
+    }
+
+    &--cache {
+      &::after {
+        top: 41px;
+        left: 41px;
+        width: 32px;
+        height: 32px;
+        background-image: url("../assets/icons/cache.svg");
+      }
+    }
+
+    &--shield {
+      &::after {
+        top: 33px;
+        left: 32px;
+        width: 48px;
+        height: 48px;
+        background-image: url("../assets/icons/shield.svg");
+      }
+    }
+
+    @include for-width(-mobile-md) {
+      margin: 0 auto;
+      max-width: 410px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--neutral-750);
+    letter-spacing: -0.3px;
+    text-transform: capitalize;
+  }
+
+  &__item-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: -0.02em;
+    color: var(--neutral-650);
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  .desc {
+    margin-bottom: rem(46);
+    letter-spacing: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 18px 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-transform: capitalize;
+  color: var(--color-white);
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.2s;
+  background-color: var(--primary-425);
+  transition-timing-function: linear;
+
+  &:focus {
+    border-color: var(--primary-425);
+    background-color: var(--color-white);
+    color: var(--primary-425);
+  }
+
+  &:hover {
+    border-color: var(--primary-425);
+    background-color: var(--color-white);
+    color: var(--primary-425);
+  }
+
+  &:active {
+    border-color: var(--primary-425);
+    background-color: var(--primary-25);
+    color: var(--primary-425);
+  }
+
+  &--disabled {
+    background-color: var(--neutral-100);
+    color: var(--neutral-200);
+    cursor: default;
+    pointer-events: none;
+  }
+}

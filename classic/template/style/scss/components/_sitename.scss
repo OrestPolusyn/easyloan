@@ -1,0 +1,26 @@
+.sitename {
+  padding: rem(94) 0 rem(90);
+  color: var(--neutral-650);
+  background-color: var(--color-teal-400);
+  background-image: url('../assets/icons/waves.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 76%;
+
+  &__content {
+    text-align: center;
+
+    >*:not(.btn) {
+      margin: 0 auto 32px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    max-width: 515px;
+  }
+
+  &__text {
+    max-width: 900px;
+  }
+}

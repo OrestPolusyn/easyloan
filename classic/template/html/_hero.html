@@ -1,0 +1,36 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+
+      <div class="hero__content">
+        <h1 class="hero__title">{{header-title}}</h1>
+
+        ${require('./_form.html')}
+        
+        <ul class="hero__list list">
+          <li class="list__item">
+            {{label-1}}
+          </li>
+
+          <li class="list__item">
+            {{label-2}}
+          </li>
+
+          <li class="list__item">
+            {{label-3}}
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="hero__picture">
+        <picture>
+          <source srcset="../assets/hero.webp" type="image/webp">
+          <img class="hero__image" src="../assets/hero.png" width="633" height="645" alt="Lady with cofffe"
+            loading="lazy">
+        </picture>
+      </div>
+
+    </div>
+  </div>
+</section>

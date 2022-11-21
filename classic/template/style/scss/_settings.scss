@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "CeraPro";
+  src: url('../fonts/CeraPro-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('../fonts/CeraPro-Bold.woff2') format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.page {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+
+.site-container {
+  @include flex;
+
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.main {
+  padding-top: var(--header-height);
+}
+
+.logo {
+  width: 100%;
+  max-width: 80px;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  margin-bottom: rem(32);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.25px;
+  color: var(--neutral-750);
+  text-transform: capitalize;
+}
+
+.desc {
+  margin-bottom: rem(32);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--neutral-650);
+  letter-spacing: -0.03em;
+}
+
+
+.x8 {
+  z-index: 10;
+}
+
+.f16 {
+  box-sizing: content-box;
+}

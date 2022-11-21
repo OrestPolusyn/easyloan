@@ -2,9 +2,11 @@
   <div class="container">
     <nav class="nav">
 
+      <!--logo-start-->
       <a class="logo" href="#">
-        <img src="../assets/logo.svg" class="image" width="80" height="50" alt="SiteName logo" loading="lazy">
+        <img src="../assets/logo.svg" class="image" width="80" height="50" alt="{{logo-text}}" loading="lazy">
       </a>
+      <!--logo-finish-->
 
       <ul>
         <li>
@@ -15,7 +17,7 @@
 
         <li>
           <a href="#work">
-            {{how-it-works-title}}
+            {{how-it-work-title}}
           </a>
         </li>
 
@@ -32,9 +34,12 @@
         </li>
       </ul>
 
-      <a class="nav__btn btn" href="#">
-        {{button-name}}
-      </a>
+
+      <form action="#" data-form-name="short-form">
+        <button class="nav__btn btn" type="button">
+          {{button-name}}
+        </button>
+      </form>
     </nav>
   </div>
 </header>

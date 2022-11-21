@@ -1,0 +1,30 @@
+<section class="faq" id="faq">
+  <div class="container">
+
+    <h2 class="title">
+      {{apr-title-2}}
+    </h2>
+
+    <p class="desc">
+      {{apr-text}}
+    </p>
+
+    <ul class="faq-list">
+      ${require('../../src/faq/index.js').default.map(({ question, answer, open = '' }) =>
+      `<li class="faq-list__item">
+        <details class="faq-list__faq" ${open}>
+          <summary>
+            {{${question}}}
+          </summary>
+          <div class="faq-list__content">
+            {{${answer}}}
+          </div>
+        </details>
+      </li>
+
+      `
+      ).join('')}
+    </ul>
+
+  </div>
+</section>

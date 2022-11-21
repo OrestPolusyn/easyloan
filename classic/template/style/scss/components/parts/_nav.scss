@@ -1,0 +1,22 @@
+.nav {
+  @include flex-all-sb;
+
+  ul {
+    @include flex-v-center;
+
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--nav-black);
+
+    li {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: rem(47);
+      }
+    }
+  }
+}

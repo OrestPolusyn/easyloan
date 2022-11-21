@@ -1,0 +1,20 @@
+<form class="hero__form" action="#" data-form-name="short-form">
+
+  <label class="sr-only" for="{@@-requested-amount-id}">{{login-label-amount}}</label>
+  <div class="hero__select">
+    <select class="hero__form-area" name="{@@-requested-amount-name}"
+      id="{@@-requested-amount-id}">{@@-requested-amount-options}</select>
+  </div>
+
+  <label class="sr-only" for="{@@-input-email-id}">{{login-label-email}}</label>
+
+  <input class="hero__form-area" type="{@@-input-email-type}" name="{@@-input-email-name}" id="{@@-input-email-id}"
+    placeholder="{{login-label-email}}">
+
+  <label class="sr-only" for="{@@-input-ssn-id}">{{login-label-ssn}}</label>
+
+  <input class="hero__form-area" type="{@@-input-ssn-type}" name="{@@-input-ssn-name}" id="{@@-input-ssn-id}"
+    placeholder="{{login-label-ssn}}">
+
+  <button class="btn" type="submit">{{button-name}}</button>
+</form>

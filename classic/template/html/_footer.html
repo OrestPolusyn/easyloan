@@ -1,0 +1,48 @@
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer__inner">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#advantages">Home</a>
+        </li>
+
+        ${require('../../src/modals/index.js').default.map((item) =>
+        `<li class="footer__item">
+          <a class="footer__link" href="#${item.href}">{{${item.text}}}</a>
+        </li>`
+        ).join('')}
+      </ul>
+
+      <address class="address">
+        <div class="address__item">
+          <span class="address__name">
+            {{email}}
+          </span>
+
+          <span class="address__content">
+            {{contact-email}}
+          </span>
+        </div>
+
+        <div class="address__item">
+          <span class="address__name">
+            {{address}}
+          </span>
+
+          <span class="address__content">
+            {@@-address}
+          </span>
+        </div>
+      </address>
+    </div>
+
+    <p>
+      {{disclaimer}}
+    </p>
+
+    <div class="copy">
+      {{copyright}}
+    </div>
+  </div>
+</footer>

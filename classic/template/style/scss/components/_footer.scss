@@ -1,0 +1,74 @@
+.footer {
+  font-family: var(--font-family-secondary);
+  margin-top: auto;
+  padding: 78px 0;
+  color: var(--neutral-650);
+  background-color: var(--color-teal-400);
+
+  &__inner {
+    @include flex-sb;
+
+    margin-bottom: 38px;
+    font-size: 18px;
+    line-height: 1.6;
+
+    @include for-width(-mobile-sl) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 15px;
+    gap: 17px 20px;
+    width: 100%;
+    max-width: 785px;
+
+    a {
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+
+    @include for-width(-tablet) {
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.6;
+
+    &:last-of-type {
+      margin-bottom: 21px;
+    }
+
+    @include for-width(-mobile-sl) {
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  .copy {
+    font-size: 12px;
+    line-height: 1.6;
+
+    @include for-width(-mobile-sl) {
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: -0.15px;
+    }
+  }
+
+}

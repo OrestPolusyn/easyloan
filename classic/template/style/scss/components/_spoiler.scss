@@ -1,0 +1,33 @@
+.spoiler {
+  padding: rem(109) 0;
+
+  &__inner {
+    @include flex-all-sb;
+
+    >* {
+      width: 100%;
+      max-width: 550px;
+    }
+  }
+
+  &__picture {
+    align-self: flex-start;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-right: 20px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .list {
+    margin-bottom: 32px;
+  }
+
+  .desc {
+    letter-spacing: 0;
+  }
+}
