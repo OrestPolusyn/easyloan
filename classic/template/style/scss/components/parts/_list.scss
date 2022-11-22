@@ -1,7 +1,6 @@
 .list {
   &__item {
     position: relative;
-
     &:not(:last-child) {
       margin-bottom: rem(35);
 

@@ -7,8 +7,9 @@ import './style/index.styl';
 import './style/index.less';
 
 documentReady(() => {
+  const headerHeight = document.querySelector('.header')?.offsetHeight;
+
   const getHeaderHeight = () => {
-    const headerHeight = document.querySelector('.header')?.offsetHeight;
     document
       .querySelector(':root')
       .style.setProperty('--header-height', `${headerHeight}px`);
@@ -29,7 +30,7 @@ documentReady(() => {
 
     const header = document.querySelector('.header');
     let toggled;
-    const threshold = 200;
+    const threshold = headerHeight;
 
     function checkScroll() {
       curScroll = w.scrollY || doc.scrollTop;

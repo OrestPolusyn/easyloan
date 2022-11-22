@@ -1,11 +1,9 @@
 $browser-context: 16;
-$percent: 100%;
-$myFullHD: 1920;
 
-@function rem($pixels, $context: $browser-context) {
-  @return #{calc($pixels / $context)}rem;
+@function rem($pixels) {
+  @return #{calc($pixels / $browser-context)}rem;
 }
 
-@function em($pixels, $context: $browser-context) {
-  @return #{calc($pixels / $context)}em;
+@function em($pixels) {
+  @return #{calc($pixels / $browser-context)}em;
 }
