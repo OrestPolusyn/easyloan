@@ -11,7 +11,7 @@
   line-height: 1.5;
   white-space: nowrap;
   text-transform: capitalize;
-  color: var(--color-white);
+  color: var(--primary-0);
   transition-property: color, background-color, border-color;
   transition-duration: 0.2s;
   background-color: var(--primary-425);
@@ -19,13 +19,13 @@
 
   &:focus {
     border-color: var(--primary-425);
-    background-color: var(--color-white);
+    background-color: var(--primary-0);
     color: var(--primary-425);
   }
 
   &:hover {
     border-color: var(--primary-425);
-    background-color: var(--color-white);
+    background-color: var(--primary-0);
     color: var(--primary-425);
   }
 

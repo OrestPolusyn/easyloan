@@ -45,9 +45,10 @@
     &::after {
       content: "";
       position: absolute;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: var(--primary-425);
     }
 
     &:last-child {
@@ -63,7 +64,7 @@
 
     &:hover {
       border-color: transparent;
-      background-color: var(--color-white);
+      background-color: var(--primary-0);
       box-shadow: var(--shadow-item);
     }
 
@@ -73,7 +74,7 @@
         left: 47px;
         width: 19px;
         height: 32px;
-        background-image: url("../assets/icons/volt.svg");
+        mask-image: url("../assets/icons/volt.svg");
       }
     }
 
@@ -83,7 +84,7 @@
         left: 41px;
         width: 32px;
         height: 32px;
-        background-image: url("../assets/icons/cache.svg");
+        mask-image: url("../assets/icons/cache.svg");
       }
     }
 
@@ -93,7 +94,7 @@
         left: 32px;
         width: 48px;
         height: 48px;
-        background-image: url("../assets/icons/shield.svg");
+        mask-image: url("../assets/icons/shield.svg");
       }
     }
 

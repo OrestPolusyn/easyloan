@@ -6,7 +6,7 @@
         <h1 class="hero__title">{{header-title}}</h1>
 
         ${require('./_form.html')}
-        
+
         <ul class="hero__list list">
           <li class="list__item">
             {{label-1}}
@@ -22,14 +22,20 @@
         </ul>
 
       </div>
+      <div class="hero__picture-box">
+        <div class="hero__picture">
+          <picture>
+            <source srcset="../assets/hero.webp" type="image/webp" media="(min-width: 577px)">
+            <img class="hero__image" src="../assets/hero.jpg" width="633" height="645" alt="{{header-title}}"
+              loading="lazy">
+          </picture>
+        </div>
 
-      <div class="hero__picture">
-        <picture>
-          <source srcset="../assets/hero.webp" type="image/webp" media="(min-width: 577px)">
-          <source srcset="../assets/hero-mob.png" type="image/png" media="(max-width: 576px)">
-          <img class="hero__image" src="../assets/hero.png" width="633" height="645" alt="{{header-title}}"
-            loading="lazy">
-        </picture>
+        <img class="hero__picture-bg hero__picture-bg--desktop" src="../assets/right-side.svg" alt="" width="678"
+          height="646">
+          
+        <img class="hero__picture-bg hero__picture-bg--mobile" src="../assets/right-side-mob.svg" alt="" width="352"
+          height="415">
       </div>
 
     </div>
