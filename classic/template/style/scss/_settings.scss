@@ -60,6 +60,18 @@
 .logo {
   width: 100%;
   max-width: 80px;
+
+  &__image {
+    margin-bottom: 3px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.5px;
+    color: var(--neutral-750);
+  }
 }
 
 .title {
