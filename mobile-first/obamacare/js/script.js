@@ -62,6 +62,11 @@ const showQuestion = (question) => {
   })
 }
 
+const selectAnswer = (e) => {
+  if (!e.target.nodeName.toLowerCase() === 'input') return
+  nextBtn.removeAttribute('disabled')
+}
+
 const resetForm = () => {
   while (quizForm.firstChild) {
     quizForm.removeChild(quizForm.firstChild)
