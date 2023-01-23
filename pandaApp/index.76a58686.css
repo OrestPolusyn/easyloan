@@ -173,7 +173,7 @@ h1 {
 .hero {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  background: url("images/hero.efee620a.svg") center / contain no-repeat;
+  background: url("images/hero.bd87ef7b.svg") center / contain no-repeat;
   position: relative;
 }
 
@@ -207,7 +207,7 @@ h1 {
   }
 
   .hero {
-    background: url("images/hero-mob.f55e8ff1.svg") -11px 0 / 104% 100% no-repeat;
+    background: url("images/hero-mob.80b00d3c.svg") -11px 0 / 104% 100% no-repeat;
   }
 }
 
@@ -321,19 +321,19 @@ h1 {
 }
 
 .sure__item--age:before {
-  background-image: url("icons/age-limit.a1f1896a.svg");
+  background-image: url("icons/age-limit.c968a316.svg");
 }
 
 .sure__item--house:before {
-  background-image: url("icons/house.d86dac92.svg");
+  background-image: url("icons/house.4d266273.svg");
 }
 
 .sure__item--income:before {
-  background-image: url("icons/income.5b094c49.svg");
+  background-image: url("icons/income.2c3348b0.svg");
 }
 
 .sure__item--security:before {
-  background-image: url("icons/data-security.e12feca2.svg");
+  background-image: url("icons/data-security.141b3587.svg");
 }
 
 @media only screen and (max-width: 475px) {
@@ -756,7 +756,7 @@ h1 {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url("icons/check.5a898bf0.svg");
+  background-image: url("icons/check.9749ced9.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -777,7 +777,7 @@ h1 {
 
 .banner {
   border-radius: var(--radius-main);
-  background-image: url("images/section.ab295f57.svg");
+  background-image: url("images/section.cf94e580.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -895,4 +895,4 @@ h1 {
   line-height: 1.6;
 }
 
-/*# sourceMappingURL=index.b10d73a7.css.map */
+/*# sourceMappingURL=index.76a58686.css.map */

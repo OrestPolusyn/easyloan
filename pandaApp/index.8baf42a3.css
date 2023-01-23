@@ -34,6 +34,7 @@ body {
 }
 
 a:not([class]) {
+  -webkit-text-decoration-skip-ink: auto;
   text-decoration-skip-ink: auto;
 }
 
@@ -62,6 +63,7 @@ section {
 }
 
 select {
+  -webkit-appearance: none;
   appearance: none;
   text-transform: none;
   border: 0;
@@ -116,6 +118,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 input {
+  -webkit-appearance: none;
   appearance: none;
   background-color: #0000;
   border: none;
@@ -178,4 +181,4 @@ details > summary {
   list-style: none;
 }
 
-/*# sourceMappingURL=index.21711d4b.css.map */
+/*# sourceMappingURL=index.8baf42a3.css.map */
