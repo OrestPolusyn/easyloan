@@ -194,6 +194,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
 }
 
@@ -468,6 +469,11 @@ h1 {
   }
 }
 
+.personal__item.active:before, .personal__item.active:after {
+  color: var(--color-white);
+  background-color: var(--color-green-300);
+}
+
 .personal__item--reverse {
   padding-bottom: 0;
 }
@@ -497,14 +503,7 @@ h1 {
   .personal__item--reverse .personal__content {
     margin: 0 auto;
   }
-}
 
-.personal__item.active:before, .personal__item.active:after {
-  color: var(--color-white);
-  background-color: var(--color-green-300);
-}
-
-@media only screen and (max-width: 768px) {
   .personal__item {
     text-align: center;
     grid-template-columns: 1fr;
@@ -539,6 +538,12 @@ h1 {
 @media only screen and (max-width: 1024px) {
   .personal__visual {
     padding: 20px 29px 43px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .personal__visual {
+    padding: 20px 29px;
   }
 }
 
@@ -766,6 +771,13 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .details .checks {
+    max-width: none;
+    margin-left: 0;
+  }
+}
+
 .checks__item {
   padding-left: 30px;
   position: relative;
@@ -833,6 +845,12 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .banner__title {
+    padding: 0 10px;
+  }
+}
+
 .banner__image {
   width: 100%;
   height: 355px;
@@ -875,6 +893,9 @@ h1 {
 
 @media only screen and (max-width: 576px) {
   .banner {
+    background-image: url("images/section-mob.998517e4.svg");
+    background-position: bottom;
+    background-size: 100%;
     grid-template-columns: 1fr;
     margin-bottom: 57px;
   }
