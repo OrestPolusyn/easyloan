@@ -258,6 +258,26 @@ window.addEventListener("resize", $6cc1eacb3c93609d$var$fixHeight);
 
 
 
+const $eb268d716de1399c$var$observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6
+};
+function $eb268d716de1399c$var$observerCallback(entries, observer) {
+    entries.forEach((entry)=>{
+        if (entry.isIntersecting) // Fade in observed elements that are in view
+        entry.target.classList.add("active");
+        else // Fade out observed elements that are not in view
+        entry.target.classList.remove("active");
+    });
+}
+// Grab all relevant elements from DOM
+const $eb268d716de1399c$var$fadeElms = document.querySelectorAll(".personal__item");
+// Call function for each element
+const $eb268d716de1399c$var$observer = new IntersectionObserver($eb268d716de1399c$var$observerCallback, $eb268d716de1399c$var$observerOptions);
+$eb268d716de1399c$var$fadeElms.forEach((el)=>$eb268d716de1399c$var$observer.observe(el));
+
+
 
 
 if (null) null.accept();
