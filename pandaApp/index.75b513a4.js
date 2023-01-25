@@ -258,24 +258,53 @@ window.addEventListener("resize", $6cc1eacb3c93609d$var$fixHeight);
 
 
 
-const $eb268d716de1399c$var$observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.6
-};
-function $eb268d716de1399c$var$observerCallback(entries, observer) {
-    entries.forEach((entry)=>{
-        if (entry.isIntersecting) // Fade in observed elements that are in view
-        entry.target.classList.add("active");
-        else // Fade out observed elements that are not in view
-        entry.target.classList.remove("active");
-    });
+// const observerOptions = {
+//   root: null, // Null = based on viewport
+//   rootMargin: '0px', // Margin for root if desired
+//   threshold: 0.6, // Percentage of visibility needed to execute function
+// };
+// function observerCallback(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       // Fade in observed elements that are in view
+//       entry.target.classList.add('active');
+//     } else {
+//       // Fade out observed elements that are not in view
+//       entry.target.classList.remove('active');
+//     }
+//   });
+// }
+// // Grab all relevant elements from DOM
+// const fadeElms = document.querySelectorAll('.personal__item');
+// // Call function for each element
+// const observer = new IntersectionObserver(observerCallback, observerOptions);
+// fadeElms.forEach(el => observer.observe(el));
+function $eb268d716de1399c$var$elementFromTop(elem, classToAdd, distanceFromTop, unit) {
+    var winY = window.innerHeight || document.documentElement.clientHeight, distTop = elem.getBoundingClientRect().top, distPercent = Math.round(distTop / winY * 100), distPixels = Math.round(distTop), distUnit;
+    distUnit = unit == "percent" ? distPercent : distPixels;
+    if (distUnit <= distanceFromTop) {
+        if (!$eb268d716de1399c$var$hasClass(elem, classToAdd)) $eb268d716de1399c$var$addClass(elem, classToAdd);
+    } else $eb268d716de1399c$var$delClass(elem, classToAdd);
 }
-// Grab all relevant elements from DOM
-const $eb268d716de1399c$var$fadeElms = document.querySelectorAll(".personal__item");
-// Call function for each element
-const $eb268d716de1399c$var$observer = new IntersectionObserver($eb268d716de1399c$var$observerCallback, $eb268d716de1399c$var$observerOptions);
-$eb268d716de1399c$var$fadeElms.forEach((el)=>$eb268d716de1399c$var$observer.observe(el));
+// params: element id, class to add, distance from top, unit ('percent' or 'pixels')
+function $eb268d716de1399c$var$hasClass(el, cls) {
+    if (el.className.match("(?:^|\\s)" + cls + "(?!\\S)")) return true;
+}
+function $eb268d716de1399c$var$addClass(el, cls) {
+    if (!el.className.match("(?:^|\\s)" + cls + "(?!\\S)")) el.className += " " + cls;
+}
+function $eb268d716de1399c$var$delClass(el, cls) {
+    el.className = el.className.replace(new RegExp("(?:^|\\s)" + cls + "(?!\\S)"), "");
+}
+window.addEventListener("scroll", function() {
+    $eb268d716de1399c$var$elementFromTop(document.getElementById("one"), "active", 150, "pixels");
+}, false);
+window.addEventListener("scroll", function() {
+    $eb268d716de1399c$var$elementFromTop(document.getElementById("two"), "active", 250, "pixels");
+}, false);
+window.addEventListener("scroll", function() {
+    $eb268d716de1399c$var$elementFromTop(document.getElementById("three"), "active", 350, "pixels");
+}, false);
 
 
 
